@@ -13,7 +13,9 @@ const server = Bun.serve({
   development: true,
 
   // Handle API requests
+  // eslint-disable-next-line unused-imports/no-unused-vars
   async fetch(req) {
+    // eslint-disable-next-line no-console
     console.log('on server')
 
     // Return 404 for unmatched routes
@@ -21,4 +23,5 @@ const server = Bun.serve({
   },
 })
 
+// eslint-disable-next-line no-console
 console.log(`Listening on ${server.url}`)
