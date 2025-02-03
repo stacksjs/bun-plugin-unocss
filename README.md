@@ -30,14 +30,19 @@ You may now use the plugin now via `Bun.build`:
 
 ```ts
 // build.ts
+import type { UserConfig } from 'unocss'
 import { plugin as unocss } from 'bun-plugin-unocss'
 // import unocss from 'bun-plugin-unocss'
+
+const config: UserConfig = {
+  // Your UnoCSS config
+}
 
 Bun.build({
   entrypoints: ['./src/index.html'],
   outdir: './dist',
   plugins: [
-    unocss()
+    unocss(config), // by default, it will look for the Uno config file in the project root
   ],
 })
 ```
@@ -51,20 +56,13 @@ Additionally, it can also be used in conjunction with HTML imports, via `Bun.ser
 import home from './home.html'
 
 const server = Bun.serve({
-  // Add HTML imports to `static`
   static: {
     // Bundle & route home.html to "/home"
     '/': home,
   },
 
-  // Enable development mode for:
-  // - Detailed error messages
-  // - Rebuild on request
-  development: true,
-
-  // Handle API requests
   async fetch(req) {
-    console.log('on server')
+    console.log('any other request', req.url)
 
     // Return 404 for unmatched routes
     return new Response('Not Found', { status: 404 })

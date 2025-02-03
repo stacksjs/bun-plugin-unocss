@@ -1,34 +1,29 @@
 import { afterAll, describe, expect, it } from 'bun:test'
 import { plugin as unocss } from '../src/index'
+import unoConfig from '../uno.config'
 
 describe('bun-plugin-unocss', () => {
   it('should inject generated CSS into HTML', async () => {
-    const html = `
-      <!DOCTYPE html>
-      <html>
-        <head><title>Test</title></head>
-        <body>
-          <div class="mt-24 text-red-500"></div>
-        </body>
-      </html>
-    `
+    const htmlPath = `${import.meta.dir}/test.html`
+    await Bun.write(htmlPath, `
+    <!DOCTYPE html>
+    <html>
+      <head><title>Test</title></head>
+      <body>
+        <div class="mt-24 text-red-500"></div>
+      </body>
+    </html>
+  `)
 
-    await Bun.write('test.html', html)
-
-    // Process with Bun plugin
     const result = await Bun.build({
-      entrypoints: ['test.html'],
-      outdir: 'out',
-      plugins: [unocss],
-      root: import.meta.dir, // Add root directory specification
+      entrypoints: [htmlPath],
+      outdir: `${import.meta.dir}/out`,
+      plugins: [unocss(unoConfig)],
     })
 
-    // Get the output contents directly from build results
     const output = await result.outputs[0].text()
-
-    // Verify CSS properties without spaces (UnoCSS minifies by default)
-    expect(output).toInclude('margin-top:6rem') // mt-24
-    expect(output).toInclude('color:rgb(239 68 68') // text-red-500
+    expect(output).toInclude('.mt-24{margin-top:6rem}')
+    expect(output).toInclude('.text-red-500{color:rgb(239 68 68)}')
   })
 
   it('should handle HTML without UnoCSS classes', async () => {
@@ -38,7 +33,7 @@ describe('bun-plugin-unocss', () => {
     const result = await Bun.build({
       entrypoints: ['test-empty.html'],
       outdir: 'out',
-      plugins: [unocss],
+      plugins: [unocss(unoConfig)],
       root: import.meta.dir,
     })
 
