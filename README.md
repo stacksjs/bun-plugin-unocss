@@ -6,6 +6,8 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 <!-- [![Codecov][codecov-src]][codecov-href] -->
 
+# bun-plugin-unocss
+
 > "Instant On-demand Atomic CSS Engine" - UnoCSS
 
 ## Features
