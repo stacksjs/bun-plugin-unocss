@@ -1,4 +1,22 @@
 
+## v0.1.1...main
+
+[compare changes](https://github.com/stacksjs/bun-plugin-unocss/compare/v0.1.1...main)
+
+### 🚀 Enhancements
+
+- Make plugin configurable ([d9d2359](https://github.com/stacksjs/bun-plugin-unocss/commit/d9d2359))
+
+### 🏡 Chore
+
+- Add tests ([a89cee5](https://github.com/stacksjs/bun-plugin-unocss/commit/a89cee5))
+- Add github funding info ([530767f](https://github.com/stacksjs/bun-plugin-unocss/commit/530767f))
+- Add title ([4428577](https://github.com/stacksjs/bun-plugin-unocss/commit/4428577))
+
+### ❤️ Contributors
+
+- Chris ([@chrisbbreuer](http://github.com/chrisbbreuer))
+
 ## v0.1.0...main
 
 [compare changes](https://github.com/stacksjs/bun-plugin-unocss/compare/v0.1.0...main)

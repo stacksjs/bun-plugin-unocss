@@ -1,7 +1,7 @@
 {
   "name": "bun-plugin-unocss",
   "type": "module",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Bun plugin that allows for using UnoCSS along the Bun server.",
   "author": "Chris Breuer <chris@stacksjs.org>",
   "license": "MIT",
