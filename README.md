@@ -44,7 +44,7 @@ Bun.build({
   entrypoints: ['./src/index.html'],
   outdir: './dist',
   plugins: [
-    unocss(config), // by default, it will look for the Uno config file in the project root
+    unocss, // by default, it will look for the Uno config file in the project root
   ],
 })
 ```
