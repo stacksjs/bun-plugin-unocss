@@ -6,7 +6,7 @@
       "devDependencies": {
         "@stacksjs/eslint-config": "^3.15.1-beta.4",
         "@types/bun": "^1.2.2",
-        "@unocss/core": "^65.5.0",
+        "@unocss/core": "^66.0.0",
         "bumpp": "^10.0.3",
         "bun-plugin-dtsx": "^0.21.9",
         "changelogen": "^0.5.7",
@@ -17,7 +17,7 @@
     },
   },
   "overrides": {
-    "@unocss/core": "65.5.0",
+    "@unocss/core": "66.0.0",
     "unconfig": "0.3.10",
   },
   "packages": {
@@ -241,7 +241,7 @@
 
     "@unocss/config": ["@unocss/config@65.4.2", "", { "dependencies": { "@unocss/core": "65.4.2", "unconfig": "~0.6.0" } }, "sha512-2xyWDt6t879rsdxJ0TiRbk9ENkGuLjAWjl3aAph5HHxwgGaBN1c9S5G9607j/WXP+tO6c37B4Q1iG/XYx35HBA=="],
 
-    "@unocss/core": ["@unocss/core@65.5.0", "", {}, "sha512-XYWdS09M2XOjZNDotGhI2TIW/6duLNiyssopwjCbv4AlPklF0bZI86SKI55syYDBt6GRadoQbuvUkhSiTV/hzQ=="],
+    "@unocss/core": ["@unocss/core@66.0.0", "", {}, "sha512-PdVbSMHNDDkr++9nkqzsZRAkaU84gxMTEgYbqI7dt2p1DXp/5tomVtmMsr2/whXGYKRiUc0xZ3p4Pzraz8TcXA=="],
 
     "@unocss/extractor-arbitrary-variants": ["@unocss/extractor-arbitrary-variants@65.4.3", "", { "dependencies": { "@unocss/core": "65.4.3" } }, "sha512-RhSOOzOxkNjJl9zeglaBe0U+o39jleCCNPWJ87DDJA3ckbyylIIf21ZwY1Xu76rmdar5DT9ob7ucuPfEpJLN9A=="],
 
