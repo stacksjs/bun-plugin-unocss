@@ -48,8 +48,8 @@
   "devDependencies": {
     "@stacksjs/eslint-config": "^3.15.1-beta.4",
     "@types/bun": "^1.2.2",
-    "@unocss/core": "^65.4.3",
-    "bumpp": "^10.0.2",
+    "@unocss/core": "^65.5.0",
+    "bumpp": "^10.0.3",
     "bun-plugin-dtsx": "^0.21.9",
     "changelogen": "^0.5.7",
     "lint-staged": "^15.4.3",
@@ -57,7 +57,7 @@
     "typescript": "^5.7.3"
   },
   "overrides": {
-    "@unocss/core": "65.4.3",
+    "@unocss/core": "65.5.0",
     "unconfig": "0.3.10"
   },
   "simple-git-hooks": {
