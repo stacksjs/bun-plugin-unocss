@@ -51,7 +51,7 @@
     "@unocss/core": "^66.0.0",
     "bumpp": "^10.0.3",
     "bun-plugin-dtsx": "^0.21.9",
-    "changelogen": "^0.6.0",
+    "changelogen": "^0.6.1",
     "lint-staged": "^15.4.3",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.8.2"
