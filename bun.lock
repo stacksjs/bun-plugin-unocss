@@ -5,7 +5,7 @@
       "name": "bun-plugin-unocss",
       "devDependencies": {
         "@stacksjs/eslint-config": "^3.15.1-beta.4",
-        "@types/bun": "^1.2.5",
+        "@types/bun": "^1.2.8",
         "@unocss/core": "^66.0.0",
         "bumpp": "^10.1.0",
         "bun-plugin-dtsx": "^0.21.9",
@@ -195,7 +195,7 @@
 
     "@stylistic/eslint-plugin": ["@stylistic/eslint-plugin@2.13.0", "", { "dependencies": { "@typescript-eslint/utils": "^8.13.0", "eslint-visitor-keys": "^4.2.0", "espree": "^10.3.0", "estraverse": "^5.3.0", "picomatch": "^4.0.2" }, "peerDependencies": { "eslint": ">=8.40.0" } }, "sha512-RnO1SaiCFHn666wNz2QfZEFxvmiNRqhzaMXHXxXXKt+MEP7aajlPxUSMIQpKAaJfverpovEYqjBOXDq6dDcaOQ=="],
 
-    "@types/bun": ["@types/bun@1.2.5", "", { "dependencies": { "bun-types": "1.2.5" } }, "sha512-w2OZTzrZTVtbnJew1pdFmgV99H0/L+Pvw+z1P67HaR18MHOzYnTYOi6qzErhK8HyT+DB782ADVPPE92Xu2/Opg=="],
+    "@types/bun": ["@types/bun@1.2.8", "", { "dependencies": { "bun-types": "1.2.7" } }, "sha512-t8L1RvJVUghW5V+M/fL3Thbxcs0HwNsXsnTEBEfEVqGteiJToOlZ/fyOEaR1kZsNqnu+3XA4RI/qmnX4w6+S+w=="],
 
     "@types/debug": ["@types/debug@4.1.12", "", { "dependencies": { "@types/ms": "*" } }, "sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ=="],
 
@@ -339,7 +339,7 @@
 
     "bun-plugin-dtsx": ["bun-plugin-dtsx@0.21.9", "", { "dependencies": { "@stacksjs/dtsx": "^0.8.0" } }, "sha512-ZEGVuJllTxvTGGa+fcKst0/FvShPsdll209PVWgGalEeLxsp5NfGbmmPAHsHHLxNlffxizdY+cGwI7ZmmWUpRw=="],
 
-    "bun-types": ["bun-types@1.2.5", "", { "dependencies": { "@types/node": "*", "@types/ws": "~8.5.10" } }, "sha512-3oO6LVGGRRKI4kHINx5PIdIgnLRb7l/SprhzqXapmoYkFl5m4j6EvALvbDVuuBFaamB46Ap6HCUxIXNLCGy+tg=="],
+    "bun-types": ["bun-types@1.2.7", "", { "dependencies": { "@types/node": "*", "@types/ws": "*" } }, "sha512-P4hHhk7kjF99acXqKvltyuMQ2kf/rzIw3ylEDpCxDS9Xa0X0Yp/gJu/vDCucmWpiur5qJ0lwB2bWzOXa2GlHqA=="],
 
     "bundle-name": ["bundle-name@4.1.0", "", { "dependencies": { "run-applescript": "^7.0.0" } }, "sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q=="],
 
