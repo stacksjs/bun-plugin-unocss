@@ -36,22 +36,27 @@
   "files": ["LICENSE.md", "README.md", "dist"],
   "scripts": {
     "build": "bun build.ts",
-    "lint": "bunx eslint .",
-    "lint:fix": "bunx eslint . --fix",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
-    "changelog": "bunx changelogen --output CHANGELOG.md",
+    "lint": "bunx --bun eslint .",
+    "lint:fix": "bunx --bun eslint . --fix",
+    "changelog": "bunx logsmith --verbose",
+    "changelog:generate": "bunx logsmith --output CHANGELOG.md",
+    "release": "bun run changelog:generate && bunx bumpx prompt --recursive",
+    "postinstall": "bunx git-hooks",
     "prepublishOnly": "bun run build",
-    "release": "bun run changelog && bunx bumpp package.json --all",
     "test": "bun test",
     "typecheck": "bun tsc --noEmit"
   },
   "devDependencies": {
+    "@stacksjs/bumpx": "^0.1.13",
     "@stacksjs/docs": "^0.70.23",
     "@stacksjs/eslint-config": "^4.10.2-beta.3",
+    "@stacksjs/gitlint": "^0.1.5",
+    "@stacksjs/logsmith": "^0.1.8",
     "@types/bun": "^1.2.10",
-    "bumpp": "^10.1.0",
+    "buddy-bot": "^0.8.8",
+    "bun-git-hooks": "^0.2.19",
     "bun-plugin-dtsx": "^0.21.9",
-    "changelogen": "^0.6.1",
     "lint-staged": "^15.5.1",
     "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.3"
@@ -60,10 +65,12 @@
     "@unocss/core": "66.0.0",
     "unconfig": "0.3.10"
   },
-  "simple-git-hooks": {
-    "pre-commit": "bun lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,ts}": "bunx eslint . --fix"
+  "git-hooks": {
+    "pre-commit": {
+      "staged-lint": {
+        "*.{js,ts,json,yaml,yml,md}": "bun lint:fix"
+      }
+    },
+    "commit-msg": "bunx gitlint --edit $1"
   }
 }
