@@ -57,7 +57,7 @@
     "buddy-bot": "^0.8.9",
     "bun-git-hooks": "^0.2.19",
     "bun-plugin-dtsx": "^0.21.9",
-    "lint-staged": "^16.2.2",
+    "lint-staged": "^16.2.3",
     "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.3"
   },
