@@ -1,6 +1,7 @@
 ## Code Style Guidelines
 
 **Scope:** All files matching `**/*.{ts,tsx}`
+
 **Purpose:** Code Style & Structure specifics
 
 ### Code Style
@@ -110,6 +111,7 @@
 ## Documentation Guidelines
 
 **Scope:** All files matching `**/*.{ts,tsx,md}`
+
 **Purpose:** Documentation specific rules
 
 ### API Documentation
@@ -188,6 +190,7 @@
 ## Error Handling Guidelines
 
 **Scope:** All files matching `**/*.{ts,tsx}`
+
 **Purpose:** Error Handling and Validation specifics
 
 ### Error Handling
@@ -289,6 +292,7 @@
 ## Key Conventions
 
 **Scope:** All files matching `**/*.{ts,tsx}`
+
 **Purpose:** Key Conventions specifics
 
 ### Conventions
@@ -386,6 +390,7 @@
 ### Project Structure
 
 **Scope:** All files matching `**/*`
+
 **Purpose:** Project Structure specifics
 
 ### Root Directory
@@ -762,6 +767,7 @@ dist/
 ## bun-plugin-unocss Documentation
 
 **Scope:** General information based on the latest ./README.md content
+
 **Purpose:** Documentation for the bun-plugin-unocss package
 
 > "Instant On-demand Atomic CSS Engine" - UnoCSS
