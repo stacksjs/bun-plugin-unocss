@@ -33,23 +33,28 @@
   },
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["LICENSE.md", "README.md", "dist"],
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "dist"
+  ],
   "scripts": {
     "build": "bun build.ts",
     "fresh": "bunx rimraf node_modules/ bun.lock && bun i",
-    "lint": "bunx --bun eslint .",
-    "lint:fix": "bunx --bun eslint . --fix",
+    "lint": "bunx --bun pickier lint .",
+    "lint:fix": "bunx --bun pickier lint . --fix",
     "changelog": "bunx logsmith --verbose",
     "changelog:generate": "bunx logsmith --output CHANGELOG.md",
     "release": "bun run changelog:generate && bunx bumpx prompt --recursive",
     "postinstall": "bunx git-hooks",
     "prepublishOnly": "bun run build",
     "test": "bun test",
-    "typecheck": "bun tsc --noEmit"
+    "typecheck": "bun tsc --noEmit",
+    "format": "bunx --bun pickier format .",
+    "format:fix": "bunx --bun pickier format . --write"
   },
   "devDependencies": {
     "@stacksjs/docs": "^0.70.23",
-    "@stacksjs/eslint-config": "^4.10.2-beta.3",
     "better-dx": "^0.1.4"
   },
   "overrides": {
@@ -59,7 +64,7 @@
   "git-hooks": {
     "pre-commit": {
       "staged-lint": {
-        "*.{js,ts,json,yaml,yml,md}": "bunx --bun eslint --fix"
+        "*.{js,ts,json,yaml,yml,md}": "bunx --bun pickier lint --fix"
       }
     },
     "commit-msg": "bunx gitlint --edit .git/COMMIT_EDITMSG"
