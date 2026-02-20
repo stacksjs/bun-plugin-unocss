@@ -55,7 +55,7 @@
   },
   "devDependencies": {
     "@stacksjs/docs": "^0.70.23",
-    "better-dx": "^0.1.4"
+    "better-dx": "^0.2.5"
   },
   "overrides": {
     "@unocss/core": "66.0.0",
