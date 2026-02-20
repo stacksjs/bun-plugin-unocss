@@ -21,7 +21,7 @@ const server = Bun.serve({
     // Return 404 for unmatched routes
     return new Response('Not Found', { status: 404 })
   },
-})
+} as Parameters<typeof Bun.serve>[0])
 
 // eslint-disable-next-line no-console
 console.log(`Listening on ${server.url}`)
