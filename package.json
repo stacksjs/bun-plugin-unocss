@@ -55,10 +55,10 @@
   },
   "devDependencies": {
     "@stacksjs/docs": "^0.70.23",
-    "better-dx": "^0.2.5"
+    "better-dx": "^0.2.6"
   },
   "overrides": {
-    "@unocss/core": "66.0.0",
+    "@unocss/core": "66.6.2",
     "unconfig": "0.3.10"
   },
   "git-hooks": {
