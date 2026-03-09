@@ -6,7 +6,7 @@
       "name": "bun-plugin-unocss",
       "devDependencies": {
         "@stacksjs/docs": "^0.70.23",
-        "better-dx": "^0.2.5",
+        "better-dx": "^0.2.6",
       },
     },
   },
