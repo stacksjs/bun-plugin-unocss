@@ -1,6 +1,8 @@
 import { afterAll, describe, expect, it } from 'bun:test'
 import { plugin } from '../src/index'
-import unoConfig from '../uno.config'
+import presetWind from '@unocss/preset-wind'
+
+const unoConfig = { presets: [presetWind()] }
 
 function findHtmlOutput(result: Awaited<ReturnType<typeof Bun.build>>, name: string) {
   const output = result.outputs.find(o => o.path.endsWith(`/${name}`))
