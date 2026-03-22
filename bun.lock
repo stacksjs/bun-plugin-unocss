@@ -10,7 +10,6 @@
     },
   },
   "overrides": {
-    "@unocss/core": "66.0.0",
     "unconfig": "0.3.10",
   },
   "packages": {
