@@ -1,6 +1,6 @@
 ## Code Style Guidelines
 
-**Scope:** All files matching `**/*.{ts,tsx}`
+**Scope:**All files matching `**/*.{ts,tsx}`
 
 **Purpose:** Code Style & Structure specifics
 
@@ -52,6 +52,7 @@
 
   ```ts
   /**
+
    * Loads configuration from a file or remote endpoint
    * @param options - Configuration options
    * @param options.name - Name of the config file
@@ -61,10 +62,11 @@
    * @example
    * ```ts
    * const config = await loadConfig({
-   *   name: 'myapp',
-   *   defaultConfig: { port: 3000 }
+   * name: 'myapp',
+   * defaultConfig: { port: 3000 }
    * })
    * ```
+
    */
   async function loadConfig<T>(options: Config<T>): Promise<T>
   ```
@@ -110,7 +112,7 @@
 
 ## Documentation Guidelines
 
-**Scope:** All files matching `**/*.{ts,tsx,md}`
+**Scope:**All files matching `**/*.{ts,tsx,md}`
 
 **Purpose:** Documentation specific rules
 
@@ -189,7 +191,7 @@
 
 ## Error Handling Guidelines
 
-**Scope:** All files matching `**/*.{ts,tsx}`
+**Scope:**All files matching `**/*.{ts,tsx}`
 
 **Purpose:** Error Handling and Validation specifics
 
@@ -229,7 +231,7 @@
   ```ts
   throw new ConfigError(
     `Failed to load config file: ${filePath}`,
-    'CONFIG_LOAD_ERROR',
+    'CONFIG*LOAD*ERROR',
     { cause: error }
   )
   ```
@@ -244,8 +246,8 @@
     }
     catch (error) {
       if (error instanceof SyntaxError)
-        throw new ConfigError('Invalid JSON in config file', 'PARSE_ERROR')
-      throw new ConfigError('Failed to read config file', 'READ_ERROR')
+        throw new ConfigError('Invalid JSON in config file', 'PARSE*ERROR')
+      throw new ConfigError('Failed to read config file', 'READ*ERROR')
     }
   }
   ```
@@ -284,14 +286,14 @@
 
   function validateConfig(config: unknown): Result<Config, ConfigError> {
     if (!isValidConfig(config))
-      return err(new ConfigError('Invalid config format', 'VALIDATION_ERROR'))
+      return err(new ConfigError('Invalid config format', 'VALIDATION*ERROR'))
     return ok(config)
   }
   ```
 
 ## Key Conventions
 
-**Scope:** All files matching `**/*.{ts,tsx}`
+**Scope:**All files matching `**/*.{ts,tsx}`
 
 **Purpose:** Key Conventions specifics
 
@@ -389,7 +391,7 @@
 
 ### Project Structure
 
-**Scope:** All files matching `**/*`
+**Scope:**All files matching `**/*`
 
 **Purpose:** Project Structure specifics
 
@@ -569,17 +571,21 @@ dist/
   ```ts
   // Good
   /**
+
    * Loads configuration from a file
    * @param options - Configuration options
    * @returns Resolved configuration
+
    */
   function loadConfig(options: Config): Promise<unknown>
 
   // Avoid
   /**
+
    * Loads configuration from a file
    * @param options Configuration options
    * @returns Resolved configuration
+
    */
   function loadConfig(options: Config): Promise<unknown>
   ```
@@ -692,7 +698,7 @@ dist/
   })
   ```
 
-  ## TypeScript Usage
+## TypeScript Usage
 
 - Use interfaces for configuration objects and public APIs
 
@@ -716,7 +722,7 @@ dist/
 
   ```ts
   // Good
-  const CONFIG_EXTENSIONS = ['.ts', '.js', '.mjs', '.cjs', '.json'] as const
+  const CONFIG*EXTENSIONS = ['.ts', '.js', '.mjs', '.cjs', '.json'] as const
 
   // Avoid
   enum ConfigExtensions {
